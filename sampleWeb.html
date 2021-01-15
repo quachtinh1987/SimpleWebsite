@@ -1,0 +1,106 @@
+<html>
+	<head>
+		<title>Simple Web Design</title>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+	</head>
+	<body>
+
+		<div class="main">
+			<nav>
+				<div class="self">
+					<img src="images/self.jpg"></div>
+
+				<div class="nav-links">
+					<ul>
+						<li>
+							<a href="#">Education</a>
+						</li>
+						<li>
+							<a href="pages/employment.html">Employment</a>
+						</li>
+						<li>
+							<a href="#">Skills</a>
+						</li>
+						<li>
+							<a href="#">Hobby</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+
+			<!-- <div class="slider"></div> -->
+
+			<div class="info">
+				<img src="images/resume.png" class="resume">
+				<div id="circle">
+
+					<div class="feature one">
+					<img src="images/hobby.png">
+					<div>
+						<h1>Hobby</h1>
+						<p>I'm an avid soccer fan.</p>
+						<p>Favorite Team:Internazionale </p>
+					</div>
+					</div>
+
+				<div class="feature two">
+				<img src="images/education.png">
+									<div>
+						<h1>Education</h1>
+						<p>Western Governors University</p>
+						<p>Software Development, B.S.</p>
+					</div>
+				</div>
+
+			<div class="feature three">
+			<img src="images/employment.png">
+								<div>
+						<h1>Employment</h1>
+						<p>* System Administrator - AECOM</p>
+						<p>* Network Administrator - Contec</p>
+						<p>* Network Analyst - ATOS</p>
+						<p>* Lab Technician - Intel</p>
+						<p>* IT Technician - AER Worldwide</p>
+					</div></div>
+
+		<div class="feature four">
+		<img src="images/skills.png">
+							<div>
+						<h1>Skills</h1>
+						<p>Intermediate - Java</p>
+						<p>Familiar - Python, JavaScript</p>
+						<p>Familiar - CSS/HTML5, SQL, C++</p>
+
+					</div></div>
+</div>
+</div>
+
+<div class="controls">
+	<img src="images/arrow.png" id="upArrow">
+	<h3><b>Highlights</b></h3>
+	<img src="images/arrow.png" id="downArrow">
+
+</div>
+
+<script>
+	var circle = document.getElementById("circle");
+	var upArrow = document.getElementById("upArrow");
+	var downArrow = document.getElementById("downArrow");
+
+	var rotateValue = circle.style.transform;
+	var rotateSum;
+
+	upArrow.onclick = function(){
+		rotateSum = rotateValue + "rotate(-90deg)";
+		circle.style.transform = rotateSum;
+		rotateValue = rotateSum;
+	}
+
+	downArrow.onclick = function(){
+		rotateSum = rotateValue + "rotate(90deg)";
+		circle.style.transform = rotateSum;
+		rotateValue = rotateSum;
+	}
+</script>
+</body>
+</html>
